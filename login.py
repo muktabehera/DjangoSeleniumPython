@@ -8,16 +8,11 @@ from selenium.webdriver.common import keys
 
 
 driver = webdriver.Chrome(ChromeDriverManager().install())
-# logging.info(f"{type(driver)}")
 driver.get("https://presbot.com/login/")
-username = driver.find_elements_by_xpath('//*[@id="id_username"]')[0].send_keys("usernameisf")
-print(f"{username}")
-
-password = driver.find_elements_by_xpath('//*[@id="id_password"]')[0].send_keys("jhg")
-print(f"{password}")
-
 #click(), clear(), sendkeys(), submit()
+driver.find_elements_by_xpath('//*[@id="id_username"]')[0].send_keys("usernameisf")
+driver.find_elements_by_xpath('//*[@id="id_password"]')[0].send_keys("jhg")
+driver.find_elements_by_xpath('/html/body/header/div[1]/div/div/div[2]/div/div/div[1]/form/button')[0].submit()
 
-##
 
 
