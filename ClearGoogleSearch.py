@@ -7,10 +7,11 @@ def clear(text,element):
        element.send_keys(Keys.BACK_SPACE)
 
 driver = webdriver.Chrome(ChromeDriverManager().install())
+#driver = webdriver.Firefox(executable_path="")
 
 searchtext = "helloworld"
 driver.get("https://www.google.com/")
-s = driver.find_element_by_name("qr")
+s = driver.find_element_by_name("q")
 s.send_keys(searchtext)
 # s.clear()
 
